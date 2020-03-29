@@ -42,14 +42,14 @@ public class PasswordParser {
                 });
             });
         }catch (NullPointerException e){
-            System.out.println("chill");
+//            System.out.println("chill"); do nothing
         }
     }
 
     private void getAllUsersDetails(String passwordsPath) throws Exception {
         List<String> lines = FileUtils.readLines(new File(passwordsPath));
         for( String line : lines) {
-            if (!line.startsWith("#")) {
+            if (!line.startsWith("#") && !line.equalsIgnoreCase("")) {
                 if (line.chars().filter(ch -> ch == ':').count() != 6) {
                     throw new Exception(passwordsPath + " file doesn't have right format ! " + line);
                 }
@@ -70,7 +70,7 @@ public class PasswordParser {
     private void getAllGroupsDetails(String groupsPath) throws Exception {
             List<String> lines = FileUtils.readLines(new File(groupsPath));
             for( String line : lines) {
-                if(!line.startsWith("#")){
+                if(!line.startsWith("#") && !line.equalsIgnoreCase("")){
                     if(line.chars().filter(ch -> ch == ':').count() != 3) {
                         throw new Exception(groupsPath + " file doesn't have right format ! " + line);
                     }
