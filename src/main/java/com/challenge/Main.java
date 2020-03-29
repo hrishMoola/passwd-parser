@@ -9,7 +9,7 @@ public class Main {
 
     public static void main(String[] args) {
 //        String passwordsPath = "passwords.txt", groupsPath = "groups.txt";
-        String passwordsPath = "/etc/group", groupsPath = "/etc/passwd";
+        String groupsPath = "/etc/group", passwordsPath = "/etc/passwd";
         int i =0;
         PasswordParser passwordParser = new PasswordParser();
         while( i < args.length){
