@@ -12,7 +12,7 @@ public class Users {
     private Map<String, UserInformation> userInformationMap;
 
     Users(){
-        userInformationMap = new HashMap<>();
+        userInformationMap = new TreeMap<>();
         mapper = new ObjectMapper();
         mapper.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
     }

@@ -5,7 +5,7 @@ import java.io.File;
 public class Main {
 
 //username:x:UID:GID:comment:home_directory:login_shell /etc/passwd
-//groupname:x:GID:userid1,userid2,userid3
+//groupname:x:GID:userid1,userid2,userid3  /etc/group
 
     public static void main(String[] args) {
 //        String passwordsPath = "passwords.txt", groupsPath = "groups.txt";

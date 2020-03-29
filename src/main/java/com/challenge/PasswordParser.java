@@ -38,12 +38,15 @@ public class PasswordParser {
 
             groupDetails.values().forEach(groupDetails -> {
                 Arrays.stream(groupDetails[1].split(",")).forEach(userId -> {
-                    users.addUserMapping(userDetails.get(userId)[0], groupDetails[0]);
+                    if(!userId.equalsIgnoreCase(""))
+                        users.addUserMapping(userId, groupDetails[0]);
                 });
             });
         }catch (NullPointerException e){
-//            System.out.println("chill"); do nothing
+//            System.out.println("chill");
+            e.printStackTrace();
         }
+
     }
 
     private void getAllUsersDetails(String passwordsPath) throws Exception {
