@@ -1,6 +1,6 @@
 Password Parser
 
-A simple utility to identify all the users on a linux machine and the groups they are a part of.
+A simple utility to identify all the users on a linux machine and the groups they are a part of. This project has been implemented keeping the reference files from my system as examples. These files are provided as "groups.txt" and "passwords.txt". 
 
 To run the java version, please use the fatjar created at build/libs. If you wish to create the jar again, run "gradle fatJar" in command line, and the jar with all needed dependencies (hence the name fatjar) will be generated at build/libs. 
 -Run "java -jar <jarname>" This will run with default files at /etc/passwd and /etc/group. (jar name would build/libs/assignment_java-all-1.0.jar if running from home directory.)
@@ -22,4 +22,4 @@ Somethings like design patterns, and best practices may be lacking in my python 
 
 I have more experience in Java so I hope the Java implementation would be considered too. I've tried to implement production-ready code there, to the best of my knowledge. 
 
-Hope you had a good time looking at the code!
+Hope you had a good time looking at the code! Please feel free mail me at hmulabagula@dons.usfca.edu for any queries.
